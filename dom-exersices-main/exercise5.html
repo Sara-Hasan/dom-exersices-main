@@ -40,31 +40,29 @@
     <input type="submit" value="Submit" id="submitBtn"/>
 </form>
 <script>
-    const submitBtn = document.getElementById('submitBtn');
-submitBtn.style.display = "none";
+    let Btn = document.getElementById('submitBtn');
+btn.style.display = "none";
 
-const password = document.getElementById('password1');
-const repeat_password = document.getElementById('password2');
-const error1 = document.getElementById('pw1_check');
-const error2 = document.getElementById('pw2_check');
-const form = document.querySelector('form');
+let password = document.getElementById('password1');
+let repeatpsd = document.getElementById('password2');
+let error1 = document.getElementById('pw1_check');
+let error2 = document.getElementById('pw2_check');
+let form = document.querySelector('form');
 
 
-password.addEventListener('focusout', checkValue);
-repeat_password.addEventListener('focusout', checkEqual);
+password.addEventListener('focusout', check);
+repeatpsd.addEventListener('focusout', checkequal);
 
-function checkValue() {
+function check() {
     if (password.value.length < 6)
         error1.innerText = 'Too Short';
     else
         error1.style.display = "none"
-
 }
-
-function checkEqual() {
-    if (password.value === repeat_password.value && password.value.length >= 6)
-        submitBtn.style.display = "block";
-    else if (password.value !== repeat_password.value)
+function checkequal() {
+    if (password.value === repeatpsd.value && password.value.length >= 6)
+        btn.style.display = "block";
+    else if (password.value !== repeatpsd.value)
         error2.innerText = 'The two passwords do not match';
     else
         error2.style.display = "none";
