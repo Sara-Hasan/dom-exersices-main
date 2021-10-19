@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #2: Changing colors</title>
+    <style>
+        #mydiv {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+    
+</head>
+<body>
+<div id="mydiv"></div>
+<script>
+    let randomnum = Math.floor(Math.random() * (2 - 0 + 1)) + 0;
+    
+    let y = document.getElementById("mydiv");
+    
+    
+    let color=['red','green','blue'];
+    console.log( color[randomnum]);
+    y.style.background= color[randomnum];
+    let count = 0;
+    y.addEventListener('click',function(event){
+        y.style.background= color[randomnum];
+        event.target.style.background=color[count];
+        count++;
+        if (count == color.length){
+            count = 0;
+        }
+    }
+    );
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="email" id="email" name="email" placeholder="Email" />
+        <input type="submit" value="Submit" />
+      </form>
+
+    <script>
+        function isEmailValid(email) {
+  const emailRegexp = new RegExp(
+    /^[a-zA-Z0-9][\-_\.\+\!\#\$\%\&\'\*\/\=\?\^\`\{\|]{0,1}([a-zA-Z0-9][\-_\.\+\!\#\$\%\&\'\*\/\=\?\^\`\{\|]{0,1})*[a-zA-Z0-9]@[a-zA-Z0-9][-\.]{0,1}([a-zA-Z][-\.]{0,1})*[a-zA-Z0-9]\.[a-zA-Z0-9]{1,}([\.\-]{0,1}[a-zA-Z]){0,}[a-zA-Z0-9]{0,}$/i
+  )
+
+  return emailRegexp.test(email)
+}
+
+        /*
+  Regulat Expression Syntax
+  /Pattern/Attributes
+  Search | Replace | Match | Split | Test
+  Attributes List
+  [ i ] => Case Insensetive
+  [ g ] => Global Search
+  [ m ] => Multi Line Search
+  Brackets Use
+  [...] Character
+  [^...] Not Character
+  [a-z] Range Small Letters
+  [A-Z] Range Capital Letters
+  [0-9] Range Numbers
+  [^0-9] Not Range
+  [A-g] = Range[A-Z] Range[a-g]
+  [0-9a-z] Double Range
+*/
+
+// Example One
+
+// let string = "I Love Elzero 2 Web 8 School 6";
+// // let replace = string.replace(/[^...l]/gi, "@");
+// // let search = string.search(/l/);
+// let match = string.match(/S/);
+// let test = /I/.test(string);
+
+// // console.log(replace);
+// // console.log(search);
+// console.log(match);
+// console.log(test);
+    </script>
+</body>
+</html>
